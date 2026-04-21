@@ -24,17 +24,14 @@
 #### 1. Interface do PDV (Caixa) / POS Interface
 > 🇧🇷 Tela principal de vendas com busca rápida e fechamento de fluxo de caixa.
 > 🇺🇸 Main sales screen with quick search and cash flow checkout.
-![Arraste a imagem do PDV aqui...]
 
 #### 2. Motor de Precificação Inteligente / Smart Pricing Engine
 > 🇧🇷 Dashboard de definição de preços baseada no custo de insumos e metas de lucro.
 > 🇺🇸 Pricing dashboard based on raw material costs and profit margin goals.
-![Arraste a imagem da Precificação aqui...]
 
 #### 3. Previsão de Demanda e Estoque / Demand & Inventory Forecast
 > 🇧🇷 Gestão de estoque com indicadores baseados no volume de produção diária.
 > 🇺🇸 Inventory management with indicators based on daily production volume.
-![Arraste a imagem do Estoque/Demanda aqui...]
 
 ---
 
@@ -62,4 +59,4 @@
 
 ---
 
-📫 **Vamos conversar / Let's connect:** [LinkedIn](SEU_LINK_DO_LINKEDIN_AQUI) | joaoppierro@gmail.com
+📫 **Vamos conversar / Let's connect:** www.linkedin.com/in/joão-vitor-pierro | joaoppierro@gmail.com

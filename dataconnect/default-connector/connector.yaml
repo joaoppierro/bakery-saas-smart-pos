@@ -1,0 +1,7 @@
+connectorId: "default"
+auth:
+  authMode: "USER_AUTHENTICATED" 
+generate:
+  javascriptSdk:
+    outputDir: "../../src/dataconnect/default-connector"
+    package: "@sistema/dataconnect"

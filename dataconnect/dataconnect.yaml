@@ -1,0 +1,11 @@
+specVersion: "v1alpha"
+serviceId: "nome do sistema" 
+location: "região" 
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "SUA DATABASEdb"
+      cloudSql:
+        instanceId: "seu-instance-id-gerado-pelo-cli" 
+connectorDirs: ["./default-connector"]

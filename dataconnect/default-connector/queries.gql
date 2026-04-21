@@ -1,0 +1,53 @@
+query ListProducts($tenantId: String!) @auth(level: USER) {
+  products(where: { tenantId: { eq: $tenantId } }) {
+    id
+    sku
+    name
+    type
+    unit
+    costPrice
+    sellPrice
+    currentStock
+    minStock
+    strategicRole
+  }
+}
+
+query ListMovements($tenantId: String!) @auth(level: USER) {
+  movements(where: { tenantId: { eq: $tenantId } }, orderBy: [{ dateString: DESC }]) {
+    id
+    productId
+    type
+    quantity
+    reason
+    dateString
+  }
+}
+
+query GetDemandPredictions($tenantId: String!) @auth(level: USER) {
+  demandPredictions(where: { tenantId: { eq: $tenantId } }) {
+    id
+    productId
+    targetDate
+    predictedQuantity
+    confidenceScore
+  }
+}
+
+query GetDailyContexts($tenantId: String!) @auth(level: USER) {
+  dailyContexts(where: { tenantId: { eq: $tenantId } }) {
+    id
+    dateString
+    weather
+    event
+  }
+}
+
+query GetRuptureLogs($tenantId: String!) @auth(level: USER) {
+  ruptureLogs(where: { tenantId: { eq: $tenantId } }) {
+    id
+    productId
+    dateString
+    lostQuantity
+  }
+}

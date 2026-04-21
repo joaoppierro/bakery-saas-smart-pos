@@ -1,0 +1,150 @@
+mutation InsertTenant($id: String!, $name: String!) @auth(level: USER) {
+  tenant_insert(data: { id: $id, name: $name })
+}
+
+mutation UpdateProduct(
+  $id: String!, 
+  $tenantId: String!,
+  $sku: String, 
+  $name: String!, 
+  $type: String!, 
+  $unit: String,
+  $costPrice: Float!, 
+  $sellPrice: Float!, 
+  $currentStock: Float!, 
+  $minStock: Float!
+) @auth(level: USER) {
+  product_upsert(data: {
+    id: $id,
+    tenantId: $tenantId,
+    sku: $sku,
+    name: $name,
+    type: $type,
+    unit: $unit,
+    costPrice: $costPrice,
+    sellPrice: $sellPrice,
+    currentStock: $currentStock,
+    minStock: $minStock
+  })
+}
+
+mutation UpdateProductStrategy(
+  $id: String!,
+  $strategicRole: String,
+  $targetMargin: Float
+) @auth(level: USER) {
+  product_update(id: $id, data: {
+    strategicRole: $strategicRole,
+    targetMargin: $targetMargin
+  })
+}
+
+mutation InsertMovement(
+  $id: String!,
+  $tenantId: String!,
+  $productId: String!,
+  $type: String!,
+  $quantity: Float!,
+  $reason: String,
+  $dateString: String!
+) @auth(level: USER) {
+  movement_insert(data: {
+    id: $id,
+    tenantId: $tenantId,
+    productId: $productId,
+    type: $type,
+    quantity: $quantity,
+    reason: $reason,
+    dateString: $dateString
+  })
+}
+
+mutation UpsertPricingConfig(
+  $id: String!,
+  $tenantId: String!,
+  $taxesPercent: Float!,
+  $cardFeesPercent: Float!,
+  $fixedCostsPercent: Float!,
+  $profitMarginPercent: Float!,
+) @auth(level: USER) {
+  pricingConfig_upsert(data: {
+    id: $id,
+    tenantId: $tenantId,
+    taxesPercent: $taxesPercent,
+    cardFeesPercent: $cardFeesPercent,
+    fixedCostsPercent: $fixedCostsPercent,
+    profitMarginPercent: $profitMarginPercent,
+  })
+}
+
+mutation InsertRecipeItem(
+  $id: String!,
+  $tenantId: String!,
+  $productId: String!,
+  $ingredientId: String!,
+  $quantity: Float!
+) @auth(level: USER) {
+  recipeItem_insert(data: {
+    id: $id,
+    tenantId: $tenantId,
+    productId: $productId,
+    ingredientId: $ingredientId,
+    quantity: $quantity
+  })
+}
+
+mutation DeleteRecipeItem($id: String!) @auth(level: USER) {
+  recipeItem_delete(id: $id)
+}
+
+mutation InsertRuptureLog(
+  $id: String!,
+  $tenantId: String!,
+  $productId: String!,
+  $dateString: String!,
+  $lostQuantity: Float!,
+  $notes: String
+) @auth(level: USER) {
+  ruptureLog_insert(data: {
+    id: $id,
+    tenantId: $tenantId,
+    productId: $productId,
+    dateString: $dateString,
+    lostQuantity: $lostQuantity,
+    notes: $notes
+  })
+}
+
+mutation InsertDailyContext(
+  $id: String!,
+  $tenantId: String!,
+  $dateString: String!,
+  $weather: String!,
+  $event: String,
+) @auth(level: USER) {
+  dailyContext_insert(data: {
+    id: $id,
+    tenantId: $tenantId,
+    dateString: $dateString,
+    weather: $weather,
+    event: $event,
+  })
+}
+
+mutation InsertDemandPrediction(
+  $id: String!,
+  $tenantId: String!,
+  $productId: String!,
+  $targetDate: String!,
+  $predictedQuantity: Float!,
+  $confidenceScore: Float!
+) @auth(level: USER) {
+  demandPrediction_insert(data: {
+    id: $id,
+    tenantId: $tenantId,
+    productId: $productId,
+    targetDate: $targetDate,
+    predictedQuantity: $predictedQuantity,
+    confidenceScore: $confidenceScore
+  })
+}

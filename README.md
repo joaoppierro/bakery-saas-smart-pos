@@ -59,4 +59,4 @@
 
 ---
 
-📫 **Vamos conversar / Let's connect:** www.linkedin.com/in/joão-vitor-pierro | joaoppierro@gmail.com
+📫 **Vamos conversar / Let's connect:** www.linkedin.com/in/jvpierro | joaoppierro@gmail.com
